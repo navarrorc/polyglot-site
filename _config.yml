@@ -1,0 +1,8 @@
+
+languages: ["en", "es"]
+default_lang: "en"
+exclude_from_localization: ["js", "images", "css"]
+parallel_localization: true
+
+# Custom Excludes
+exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "firebase.json", "vendor/", "node_modules/", "src/", "package-lock.json"]

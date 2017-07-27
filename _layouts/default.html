@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!--<link rel="stylesheet" href="{{ site.github.url }}/css/main.css" type="text/css" />-->
+</head>
+
+<body>
+    <p>
+      {% for tongue in site.languages %}
+    <a {% if tongue == site.active_lang %}style="font-weight: bold;"{% endif %} href="{% if tongue == site.default_lang %} {{site.baseurl}}{{page.url}} {% else %} {{site.baseurl}}/{{ tongue }}{{page.url}} {% endif %}">{{ tongue }}</a> |
+      {% endfor %}
+    </p>
+   {{ content }}
+</body>
+</html>
